@@ -120,7 +120,7 @@ int readInputYellow()
   int sensorValue = analogRead(INPUT_YELLOW);
   if(sensorValue > MIN_SENSOR_VALUE)
   {
-    int percent = map(sensorValue, 100, 1023, 0, 100);
+    int percent = map(sensorValue, MIN_SENSOR_VALUE, 1023, 0, 100);
     return percent;
   }
   return 0;
